@@ -1,87 +1,35 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
-      </v-card>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
-          </p>
-          <p>
-            For more information on Vuetify, check out the
-            <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation </a
-            >.
-          </p>
-          <p>
-            If you have questions, please join the official
-            <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord </a
-            >.
-          </p>
-          <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board </a
-            >.
-          </p>
-          <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3" />
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br />
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire"> Continue </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+  <v-main>
+    <v-row justify="center" align="center">
+      <v-col cols="12" sm="8" md="6">
+        <v-card class="mt-10 pb-5 light-blue darken-4">
+          <v-card-title class="headline font-weight-bold text-center blue">
+            Selamat Datang!
+          </v-card-title>
+          <v-card-text>
+            <p class="font-weight-medium pt-3">Website apakah ini?</p>
+            <p class="text-justify">
+              Sebuah pusat rangkuman materi Vue Js kelas A oleh Dimas Albert
+              Abraham. Apabila ada pertanyaan silahkan menghubungi contact
+              dibawah ini:
+            </p>
+            <hr />
+            <p class="font-weight-medium pt-3">Contact:</p>
+            <ul>
+              <li>Email : albertabraham28@gmail.com</li>
+              <li>Nomor Hp : 085745974148</li>
+            </ul>
+            <!-- <br /> -->
+            <!-- <v-btn color="error" :href="data.project_url"> Link Project </v-btn> -->
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-main>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'PageIndex',
 }
 </script>
