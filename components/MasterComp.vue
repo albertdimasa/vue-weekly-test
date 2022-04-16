@@ -33,7 +33,9 @@
         <img src="~/static/icon.png" width="50px" />
       </v-btn>
     </v-app-bar>
-    <Nuxt />
+    <v-main id="content">
+      <Nuxt />
+    </v-main>
   </v-app>
 </template>
 
@@ -56,16 +58,19 @@ export default {
     changeTitle(params) {
       this.title = params.title
 
-      this.goingTo(params.id)
-    },
-    goingTo(value) {
       this.$router.push({
         name: 'id',
-        params: { id: value },
+        params: { id: params.id },
       })
     },
   },
 }
 </script>
 
-<style></style>
+<style scoped>
+#content {
+  background: url('https://cdn.pixabay.com/photo/2016/03/26/13/09/organic-1280537_1280.jpg')
+    no-repeat;
+  background-size: cover;
+}
+</style>

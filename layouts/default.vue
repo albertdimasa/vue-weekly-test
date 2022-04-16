@@ -5,10 +5,8 @@
 </template>
 
 <script>
-import MasterComp from '~/components/MasterComp.vue'
 export default {
   name: 'DefaultLayout',
-  components: { MasterComp },
 }
 </script>
 

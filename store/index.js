@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 export const state = () => ({
   data: {},
   list: [
@@ -113,7 +114,11 @@ export const state = () => ({
       title: 'Clean Code',
       summary:
         'Apa dan kenapa harus dengan clean code, 9 karakteristik clean code, KISS, DRY, dan refactoring. Clean code adalah bagaimana kode program mudah dibaca oleh programmer lain dan yang mengerjakan clean code tidak harus programmer yang bersangkutan. Kenapa code harus clean yaitu agar mudah untuk berkolaborasi dan lebih cepat mengembangkan fitur baru. Karakteristik dari clean code yaitu penamaan mudah dipahami, mudah dieja dan dicari, singkat namun mendeskripsikan konteks, konsisten, hindari penambahan konteks yang tak perlu, komentar, function, gunakan konvensi, dan formatting. Prinsip Clean Code yaitu KISS (Keep It So Simple), DRY (Don`t Repeat Yourself), dan ada refactoring yaitu proses restrukturisasi untuk mencapai KISS dan DRY.',
-      step: {},
+      step: {
+        1: 'Memahami soal yang telah diberikan',
+        2: 'Memahami code apabila bisa dipahami',
+        3: 'Menuliskan saran agar code dapat dikategorikan clean code',
+      },
       project_url: '',
     },
     {
@@ -135,12 +140,28 @@ export const state = () => ({
       },
       project_url: '',
     },
+    {
+      id: 10,
+      title: 'Vue Fundamental',
+      summary:
+        'Apa itu Vue, vue setup dan resources, dasar - dasar vue, vue directive, events dan method, computed properties dan watchers, component. Vue adalah sebuah framework yang memudahkan untuk membuat aplikasi pada bagian frontend dengan kelebihannya dokumentasi lengkap dan rapi. Cara menggunakan vue bisa menggunakan salah satu dari 2 cara yaitu dengan Vue CDN dan Vue CLI. Dasar - dasar vue ada 3 yaitu vue instance adalah instance vue baru dengan fungsi vue, vue data binding adalah syntaks berbasi html yang dapat mengikat DOM dengan dasar rendering dari vue instance dengan ada 3 jenis vue data binding yaitu di dalam konten (menggunakan kurung kurawal), di atribut elemen (menggunakan _v-bind_), pada elemen HTML (menggunakan _v-html_), dan ada vue reactivity dimana ada data yang berubah tanpa harus memuat ulang halaman interface maka data akan berubah otomatis. Bab selanjutnya ada vue directive yaitu atribut khusus yang diawali dengan _v-_ yang berfungsi untuk menjalankan perintah/ekspresi javascript di dalam atribut, seperti v-bind, v-if, v-else-if, v-else, v-on. Events dan method adalah memantau events dan menggunakan methods (fungsi/kumpulan fungsi). Computed Properties adalah bagaimana menangani fungsi yang kompleks. Watcher di vue js adalah fitur khusus yang memungkinkan kita untuk memantau sebuah variabel dan melakukan tindakan tertentu nilai tersebut berubah. Component adalah vue instance yang dapat digunakan kembali dengan nama yang telah kita definisikan. Kita bisa menggunakan komponen ini sebagai kustom elemen di dalam instance root vue yang dibuat dengan new Vue.',
+      step: {
+        1: 'Membuat file struktur html dan menginput CDN Vue js.',
+        2: 'Membuat new Vue berupa array listTodo yang kosong dan methods untuk menambahkan data baru ke array listTodo dan reset input.',
+        3: 'Membuat ordered list yang akan mengeluarkan data di listTodo menggunakan v-for.',
+        4: 'Input menggunakan v-model:value untuk mendapatkan data.',
+        5: 'Pada button tambahkan ada sebuah v-on:click atau yang saya tulis @click dan memanggil methods tambahkan.',
+        6: 'Pada text Hebat memiliki kondisi v-if ketika panjang array listTodo lebih dari atau sama dengan 4 maka baru muncul text Hebat!.',
+        7: 'Disini saya sedikit menambahkan styling pada list yaitu text-transform capitalize.',
+      },
+      project_url: '',
+    },
   ],
 })
 
 export const mutations = {
   setData(state, payload) {
-    state.data = state.list.find((item) => item.id === payload)
+    state.data = state.list.find((item) => item.id == payload)
   },
 }
 export const actions = {
