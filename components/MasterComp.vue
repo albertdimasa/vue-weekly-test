@@ -9,8 +9,8 @@
     >
       <v-list-item-group v-model="selectedItem" color="indigo darken-4 ">
         <v-subheader>Home</v-subheader>
-        <v-list-item v-for="item in list" :key="item.index">
-          <v-list-item-content @click="changeTitle(item)">
+        <v-list-item v-for="(item, index) in list" :key="index">
+          <v-list-item-content @click="changeTitle(item.title, index)">
             <v-list-item-title
               class="white--text font-weight-medium"
               v-text="item.title"
@@ -55,12 +55,11 @@ export default {
     },
   },
   methods: {
-    changeTitle(params) {
-      this.title = params.title
-
+    changeTitle(title, index) {
+      this.title = title
       this.$router.push({
         name: 'id',
-        params: { id: params.id },
+        params: { id: index },
       })
     },
   },
@@ -72,5 +71,6 @@ export default {
   background: url('https://cdn.pixabay.com/photo/2016/03/26/13/09/organic-1280537_1280.jpg')
     no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 </style>

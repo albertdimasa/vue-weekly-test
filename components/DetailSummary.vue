@@ -1,7 +1,7 @@
 <template>
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
-      <v-card class="mt-10 pb-5 light-blue darken-4">
+      <v-card class="my-10 pb-5 light-blue darken-4">
         <v-card-title class="headline font-weight-bold text-center blue">
           {{ data.title }}
         </v-card-title>
@@ -36,4 +36,4 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped></style>
